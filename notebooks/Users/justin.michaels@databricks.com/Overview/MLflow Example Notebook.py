@@ -30,10 +30,6 @@
 
 # COMMAND ----------
 
-# MAGIC %sh conda
-
-# COMMAND ----------
-
 # MAGIC %md ### Start Using MLflow in a Notebook
 # MAGIC 
 # MAGIC The first step is to import call `mlflow.set_tracking_uri` to point to your server:
@@ -43,6 +39,9 @@
 # Import MLflow and set the Tracking UI
 # mlflow.set_tracking_uri("<URL for standalone>")
 import mlflow
+import os
+os.environ['DATABRICKS_HOST'] = 'https://demo.cloud.databricks.com'
+os.environ['DATABRICKS_TOKEN'] = '<token>'
 
 # COMMAND ----------
 
